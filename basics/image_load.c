@@ -28,15 +28,15 @@ int main( int argc, char** argv )
 {
 	if (argc != 2)
 	{
-		printf("\n Usage: image_load <image>\n\n");
+		printf( "\n Usage: image_load <image>\n\n" );
 		exit(1) ;
 	}
 
-	IplImage* img = cvLoadImage( argv[1],1); 	// Load image from argument
-	cvNamedWindow("Image", CV_WINDOW_AUTOSIZE );// creates a window 
-	cvShowImage("Image", img );					// show Loaded image on the window
-	cvWaitKey(0);								// wait for a keypress
-	cvReleaseImage( &img );						// Release Image
-	cvDestroyWindow("Image");					// Destroy window
+	IplImage* img = cvLoadImage( argv[1], 1 );// Load image from argument
+	cvNamedWindow( "Image", CV_WINDOW_AUTOSIZE );// creates a window 
+	cvShowImage( "Image", img );// show Loaded image on the window
+	cvWaitKey(0);// wait for a keypress
+	cvReleaseImage( &img );// Release Image
+	cvDestroyWindow( "Image" );// Destroy window
 	exit(0);
 }
